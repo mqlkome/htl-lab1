@@ -15,6 +15,7 @@ app = Flask(__name__)
 
 courses = pd.read_csv('./data/olin-courses-16-17.csv')
 
+
 @app.route('/health')
 def health():
     return 'ok'
@@ -25,7 +26,14 @@ def home_page():
 
 @app.route('/area/<course_area>')
 def area_page(course_area):
-    return render_template('course_area.html', courses=courses[courses.course_area == course_area].iterrows())
+    return render_template('course_area.html', course_area= course_area, courses=courses[courses.course_area == course_area].iterrows())
+
+@app.route('/course/<course_name>')
+def course_page(course_name):
+	return render_template('course_page.html', course_name = course_name, course=courses[courses.course_name == course_name].iterrows())
+#@app.route('/professor/<contact>')
+#def professor_page(contact):
+#	return render_template('professor.html', professor=contact, courses=courses[courses.course_contact==contact].iterrows())
 
 if __name__ == '__main__':
     app.run(debug=True)

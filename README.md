@@ -51,6 +51,8 @@ could break it with no warning.
 
 Written by Oliver Steele <oliver.steele@olin.edu>.
 
+## Resources
+CSS linked from https://www.bootstrapcdn.com/
 
 ## License
 

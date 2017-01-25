@@ -24,8 +24,8 @@ pages = [BeautifulSoup(requests.get(u).text, 'lxml') for u in start_urls]
 hrefs = {a.attrs['href'] for page in pages for a in page.find_all('a')}
 
 # select only those href targets whose URLs look like course pages:
-# /course-listing/, followed by three or four letters, and optional hypen, three or four digits,
-# an optional letter, a hypen, and after that we don't care.
+# /course-listing/, followed by three or four letters, and optional hyphen, three or four digits,
+# an optional letter, a hyphen, and after that we don't care.
 course_urls = {urllib.parse.urljoin(start_url, href) for href in hrefs if re.match(r'\/course-listing\/[a-z]{3,4}-?\d{3,4}[a-z]?-', href)}
 
 # download and parse all the course pages
