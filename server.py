@@ -30,10 +30,11 @@ def area_page(course_area):
 
 @app.route('/course/<course_name>')
 def course_page(course_name):
-	return render_template('course_page.html', course_name = course_name, course=courses[courses.course_name == course_name].iterrows())
-#@app.route('/professor/<contact>')
-#def professor_page(contact):
-#	return render_template('professor.html', professor=contact, courses=courses[courses.course_contact==contact].iterrows())
+	return render_template('course_page.html', course_name=course_name, course=courses[courses.course_name == course_name])
+
+@app.route('/professor/<course_contact>')
+def professor_page(course_contact):
+	return render_template('professor.html', professor = course_contact, courses=courses[courses.course_contact==course_contact].iterrows())
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -50,9 +50,25 @@ could break it with no warning.
 ## Contributors
 
 Written by Oliver Steele <oliver.steele@olin.edu>.
+Modified by Mimi Kome <mimi@students.olin.edu>.
+
+##Modifications made by Mimi:
+Gave pages access to their titular data in server.py, so the page title in the tab and on the page display properly.
+
+Made the pages visually and functionally clearer using html tags organized for a screen-reader or visual user.
+
+Added a link to Bootstrap CSS, currently un-used other than to change the default fonts.
+
+Added a "Back to Course Catalog Home" link below each item on the page.
+
+Attempted to add a page for each course: partially successful, some work to do grabbing only the desired data. Probably learned how to fix this, but didn't implement the fix yet.
+
+Courses can be viewed by instructor if an instructor's name is clicked on (on home or area pages). 
+
+
 
 ## Resources
-CSS linked from https://www.bootstrapcdn.com/
+CSS (mostly un-used) linked from https://www.bootstrapcdn.com/
 
 ## License
 
